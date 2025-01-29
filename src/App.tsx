@@ -11,18 +11,19 @@ function App() {
   }
   
   const [animals, setAnimals] = useState<string[]>([]);
-  
+
   const handleClick = (): void => {
     let animalSelected = getRandomElement();
     setAnimals([...animals, animalSelected]);
   }
 
+  const renderAnimals = animals.map((animalType, index) => 
+    <AnimalShows key={index} type={animalType} />);
+
   return (
     <>
       <button onClick={handleClick}>Add Animal</button>
-      {animals.map((animalType, index) => (
-        <AnimalShows key={index} type={animalType} />
-      ))}
+      {renderAnimals}
     </>
   )
 }
