@@ -6,7 +6,7 @@ interface AnimalType {
 const AnimalShows = ({type}: AnimalType) => {
   return (
     <div>
-      
+      {type}
     </div>
   )
 }
