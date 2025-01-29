@@ -13,18 +13,18 @@ interface AnimalType {
 }
 
 const animalsMap: Record<AnimalKey, string> = {
-  bird: bird,
-  cat: cat,
-  cow: cow,
-  dog: dog,
-  gator: gator,
-  horse: horse
+  bird,
+  cat,
+  cow,
+  dog,
+  gator,
+  horse
 };
 
 const AnimalShows = ({type}: AnimalType) => {
   return (
     <div>
-      <img alt={type} src={animalsMap[type]} />
+      <img alt={`A picture of a ${type}`} src={animalsMap[type]} />
     </div>
   )
 }
