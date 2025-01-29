@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import heart from '../images/heart.svg';
+import heart from '../images/heart.svg'
 
-import { AnimalKey, animalsMap } from '../constants/animalsMap';
+import { AnimalKey, animalsMap } from '../constants/animalsMap'
 
 interface AnimalType {
-    type: AnimalKey;
+  type: AnimalKey
 }
 
-const AnimalShows = ({type}: AnimalType) => {
-const [clicks, setClicks] = useState<number>(0);
+const AnimalShows = ({ type }: AnimalType) => {
+  const [clicks, setClicks] = useState<number>(0)
 
-const handleClick = () => {
-  setClicks(clicks + 1);
-}
+  const handleClick = () => {
+    setClicks(clicks + 1)
+  }
 
   return (
     <div onClick={handleClick}>
       <img alt={`A picture of a ${type}`} src={animalsMap[type]} />
-      <img alt="heart" src={heart} style={ {width: 10 + 10 * clicks + 'px'}} />
+      <img alt="heart" src={heart} style={{ width: 10 + 10 * clicks + 'px' }} />
     </div>
   )
 }
