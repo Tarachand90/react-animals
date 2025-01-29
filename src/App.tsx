@@ -20,10 +20,10 @@ function App() {
   ))
 
   return (
-    <>
+    <div className="app">
       <button onClick={handleClick}>Add Animal</button>
       {renderAnimals}
-    </>
+    </div>
   )
 }
 
