@@ -16,9 +16,18 @@ const AnimalShows = ({ type }: AnimalType) => {
   }
 
   return (
-    <div onClick={handleClick}>
-      <img alt={`A picture of a ${type}`} src={animalsMap[type]} />
-      <img alt="heart" src={heart} style={{ width: 10 + 10 * clicks + 'px' }} />
+    <div className="animal-show" onClick={handleClick}>
+      <img
+        className="animal"
+        alt={`A picture of a ${type}`}
+        src={animalsMap[type]}
+      />
+      <img
+        className="heart"
+        alt="heart"
+        src={heart}
+        style={{ width: 10 + 10 * clicks + 'px' }}
+      />
     </div>
   )
 }
